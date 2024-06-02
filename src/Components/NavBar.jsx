@@ -24,6 +24,9 @@ const NavBar = () => {
             <Nav.Link as={Link} to="/" className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>Home</Nav.Link>
             <Nav.Link as={Link} to="/recipes" className={activeLink === 'recipes' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('recipes')}>Recipes</Nav.Link>
             <Nav.Link as={Link} to="/hiking" className={activeLink === 'hiking' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('hiking')}>Hiking</Nav.Link>
+            <Nav.Link as={Link} to="/login" className={activeLink === 'Login' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('login')}>Login</Nav.Link>
+            <Nav.Link as={Link} to="/register" className={activeLink === 'Register' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('register')}>Register</Nav.Link>
+          
           </Nav>
         </Navbar.Collapse>
       </Container>

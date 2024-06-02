@@ -1,11 +1,9 @@
-import React from 'react';
-import { useEffect } from "react";
-import { useState } from "react";
+import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from "react-router-dom";
 import axios from "axios";
-import { Container, Row, Col } from 'react-bootstrap';
 
-const Recipes = () => {
+
+const Hiking = () => {
     /*const [posts, setPosts] = useState([]);
 
     const cat = useLocation().search
@@ -56,26 +54,22 @@ const Recipes = () => {
         
         
           return (
-     
+
                 <div className = "posts-container">
                     {posts.map(post => (
                          <div className="post" key = {post.id}>
                                     <img src={post.img} alt={post.title}/>
                                 <div className="content">
-                                    <Link to={`/recipes/${post.id}`}>
+                                    <Link to={`/hiking/${post.id}`}>
                                         <h3>{post.title}</h3>
                                     </Link>
                                     <p>{post.desc} </p>
-                                    <Link to={`/recipe/${post.id}`} className="btn btn-primary">Read More</Link>
+                                    <Link to={`/hiking/${post.id}`} className="btn btn-primary">Read More</Link>
                                 </div>
                             </div>
-                
                     ))}
                 </div>
-        
           );
         };
 
-  export default Recipes;
-
-        
+  export default Hiking;
