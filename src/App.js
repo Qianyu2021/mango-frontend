@@ -5,7 +5,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBar from "./Components/NavBar";
 import Register from "./Page/Register";
 import Recipes from "./Page/Recipes";
-import Hiking from "./Page/Hiking";
 import Home from "./Page/Home";
 import Footer from "./Components/Footer";
 import Login from "./Page/Login";
@@ -21,7 +20,7 @@ function App() {
         <NavBar />
         <Routes>
           <Route exact path="/" element={<Home />} />
-          <Route path="/hiking" element={<Hiking />} />
+  
           <Route path="/recipes" element={<Recipes />} />
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />

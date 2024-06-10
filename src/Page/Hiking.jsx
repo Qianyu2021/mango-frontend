@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+/*import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from "react-router-dom";
 import axios from "axios";
 
@@ -19,6 +19,7 @@ const Hiking = () => {
         };
         fetchData();
     }, [cat]); */
+    /*
 
     const posts = [
           {
@@ -73,3 +74,5 @@ const Hiking = () => {
         };
 
   export default Hiking;
+
+*/

@@ -6,9 +6,8 @@ const Footer = () => {
         <footer>
                 <p> Email me or Connect with me {' '} 
                 <SocialIcon  href="https://www.linkedin.com/in/qiangillianyu/" url="www.linkedin.com"/> 
-                <SocialIcon fallback="email" href="mailto:gillianhappy@gmail.com" />
-                </p>
-                
+                <SocialIcon fallback="email" href="mailto:gillianhappy@gmail.com" /> </p>
+                <br />    
                 <p> Here is my github <SocialIcon href="www.github.com" url="www.github.com" /></p>
         </footer>
     );
