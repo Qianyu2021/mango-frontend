@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 
+
 const CommentForm = ({blogId}) => {
     const [comment, setComment] = useState('');
     const [name, setName] = useState('');

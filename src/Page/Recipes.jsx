@@ -5,9 +5,9 @@ import { Link, useLocation } from "react-router-dom";
 import axiosInstance from '../api/axiosInstance';
 import { Container, Row, Col } from 'react-bootstrap';
 import milkbread from "../image/milkbread.jpg";
-import CommentForm from '../Components/CommentForm';
 
-const Recipes = () => {
+
+const Recipes = ({blogId}) => {
     const [posts, setPosts] = useState([]);
     const [pictures, setPicture] = useState("");
 
@@ -48,7 +48,7 @@ const Recipes = () => {
                           </div>
                       </div>
               ))}
-              <CommentForm />
+
           </div>
   
     );
