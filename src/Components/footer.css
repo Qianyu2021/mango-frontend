@@ -1,0 +1,21 @@
+footer p {
+    margin: 1em;
+}
+
+.social {
+    border-radius: 50%;
+    overflow: hidden;
+    display: inline-block;
+    z-index: 1;
+    margin: .5em .5em .5em 0;
+}
+
+ .social a:hover .social-container {
+    transform: rotateY(360deg);
+}
+
+ .social a:before {
+    content: "";
+    transition: .5s;
+    z-index: 2;
+}

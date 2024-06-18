@@ -10,7 +10,8 @@ import Footer from "./Components/Footer";
 import Login from "./Page/Login";
 import SinglePost from './Page/SinglePost';
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
-/*import Write from "./Page/Write"; */
+import Write from "./Page/Write"; 
+//import multer from "multer";
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
     <div className="app">
       <Router>
         <NavBar />
+        <div class="app-content">
         <Routes>
           <Route exact path="/" element={<Home />} />
   
@@ -26,8 +28,9 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/recipes/:id" element={<SinglePost />} />
           <Route path="/hiking/:id" element={<SinglePost />} />
-
+          <Route path="/write" element={<Write />} />
         </Routes>
+        </div>
         <Footer />
       </Router>
     </div>

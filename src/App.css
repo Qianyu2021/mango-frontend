@@ -10,33 +10,6 @@ body {
   color: #333;
 }
 
-/* home page */
-.home_container {
-  margin: 150px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.home_container .card {
-  display: block;
-  height: 50vh;
-  width: 100vh;
-  background: rgb(239, 240, 219);
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  text-align: center;
-  margin: auto;
-}
-
-.card:hover {
-  transform: translateY(-10px);
-  box-shadow:  10px, yellowgreen;
-}
-
-
 /* recipes page*/
 
 .posts-container {
@@ -289,16 +262,16 @@ body {
   text-align: center;
 }
 
-.App-header {
-  padding: 20px;
+
+.app-content {
+  padding-top:4em;
 }
 
 nav.navbar {
-  padding: 0, 20px;
   position: fixed;
   width: 100%;
   top: 0;
-  z-index: 9999;
+  z-index: 1;
   background-color: hsl(46, 92%, 62%);
   transition: 0.32 ease-in-out;
   display:flex;
@@ -306,20 +279,25 @@ nav.navbar {
   background-color: #f7d70a !important;
 }
 
+.mango-branding {
+  display: flex;
+  align-items: flex-start;
+}
 
 nav.navbar a.navbar-brand img {
-  width: 50px;
-  margin-right:20px;
+  width: 60px;
+  margin-right:10px;
 }
 
 nav.navbar .navbar-nav .nav-link.navbar-link {
   padding: 0 30px; /* Add space between links */
   transition: color 0.2s, background-color 0.2s;
+  font-weight: bold;
+  font-size: 20px;
 }
 
-nav.navbar .navbar-nav a.nav-link.navbar-link:hover,
-nav.navbar .navbar-nav a.nav-link.navbar-link.active {
-  opacity: 1;
+nav.navbar .navbar-nav a.nav-link.navbar-link:hover {
+  color: blue;
 }
 
 span.navbar-text {
@@ -362,7 +340,6 @@ h2 {
 
 p {
   font-size: 18px;
-  margin: 20px 0;
 }
 
 .hire-me {
@@ -372,13 +349,12 @@ p {
 
 footer {
   position: fixed;  /* always stay where I put you on the screen */
-  bottom: 1px;  /* I'm putting you at the bottom with no space in between */
+  bottom: 0;  /* I'm putting you at the bottom with no space in between */
   width: 100%;  /* fill the width of your containing element (body) */
-
   background-color: rgb(228, 236, 228);
   display: flex;
-  align-items: center;
-  justify-content:center;
+  align-items: middle;
+  justify-content: flex-end;
   font-size: 12px;
 }
 
@@ -387,14 +363,19 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #f9f8f3;
   width: 100%;
   height: 100vh;
+}
+.auth .card {
+  width: 100vh;
+  margin: 10px;
+  max-width: 400px;
+  background: rgb(239, 240, 219);
 }
 
 .auth h1 {
   font-size: 35px;
-   margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 .auth form {

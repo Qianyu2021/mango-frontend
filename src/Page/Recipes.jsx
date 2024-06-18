@@ -25,6 +25,11 @@ const Recipes = ({blogId}) => {
         fetchData();
     }, [cat]); 
 
+    const getText = (html) => {
+        const doc = new DOMParser().parseFromString(html, "text/html");
+        return doc.body.textContent;
+    };
+
     const getImagePath = (imageName) => {
         try {
             return require(`../image/${imageName}`);
@@ -44,7 +49,8 @@ const Recipes = ({blogId}) => {
                               <Link to={`/recipes/${post.blogId}`}>
                                   <h3>{post.blogTitle}</h3>
                               </Link>
-                              <p>{post.description} </p>                    
+                              <p>{getText(post.description)} </p>    
+                              <Link to={`/recipes/${post.blogId}`}> Read More</Link>                
                           </div>
                       </div>
               ))}
