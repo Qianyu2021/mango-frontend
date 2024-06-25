@@ -4,7 +4,6 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import axiosInstance from '../api/axiosInstance';
 import { Container, Row, Col } from 'react-bootstrap';
-import milkbread from "../image/milkbread.jpg";
 
 
 const Recipes = ({blogId}) => {
@@ -30,20 +29,20 @@ const Recipes = ({blogId}) => {
         return doc.body.textContent;
     };
 
-    const getImagePath = (imageName) => {
-        try {
-            return require(`../image/${imageName}`);
-        } catch (err) {
-            console.log(`Error loading image ${imageName}: `, err);
-            return null;
-        }
-    };
+    // const getImagePath = (imageName) => {
+    //     try {
+    //         return require(`../image/${imageName}`);
+    //     } catch (err) {
+    //         console.log(`Error loading image ${imageName}: `, err);
+    //         return null;
+    //     }
+    // };
 
     return (
           <div className = "posts-container">
               {posts.map(post => (
                    <div className="post" key = {post.blogId}>
-                   <img src={getImagePath(post.imageUrl)}  // Use dynamic image URL
+                   <img src={(post.topImageUrl)}  // Use dynamic image URL
                         alt="food_picture"/>
                           <div className="content">
                               <Link to={`/recipes/${post.blogId}`}>

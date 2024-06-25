@@ -10,6 +10,8 @@ import CommentForm from '../Components/CommentForm';
 const SinglePost = () => {
     const [post, setPost] = useState({});
     const {id:blogId} = useParams(); // show this is 
+    const location = useLocation();
+    const navigate = useNavigate();
 
     useEffect( ()=> {
         const fetchPost = async() => {
@@ -24,12 +26,17 @@ const SinglePost = () => {
         fetchPost();
     }, [blogId]);
 
+    const getText = (html) =>{
+        const doc = new DOMParser().parseFromString(html, "text/html")
+        return doc.body.textContent
+    }
+
     return (
         <div className="singlepost">
             <div className="posts-content">
-                {post.imageUrl && (
+                {post.topImageUrl && (
                     <img
-                        src={`http://localhost:8080/upload/${post.imageUrl}`}
+                        src={post.topImageUrl}
                         alt={post.blogTitle}
                         className="post-image"
                     />
